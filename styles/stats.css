@@ -1,0 +1,50 @@
+
+    body {
+      text-align: center;
+      background-color: white;
+      color: black;
+      display:flex;
+      margin:0;
+      padding :0;
+    }
+    /* nav bar again */
+
+/* main */
+.content{
+  display: block ;
+  flex: 1 ;
+  max-width:80vw ;
+  max-height: 100vh;
+  overflow: none;
+  
+}
+.stats{
+  display: flex;
+  width: auto;
+  
+  height :70vh;
+  max-height: 100vh ;
+  flex-direction :column ;
+}
+  /* boxes */
+  .box{
+    
+    text-justify: inter-ideograph;
+    align-items: center ;
+    border: 1px solid orange ;
+    border-radius: 1pc;
+    margin-left: none;
+    margin-right: none;
+    background: rgba(0,0,0,0.3 );
+  }
+  .box:nth-last-of-type(2){
+    
+    width:38vw;
+  }
+  .box:nth-last-of-type(1){
+    width :40vw ;
+    margin-left :auto ;
+  }
+  .box:nth-last-of-type(3){
+    width: 80vw;
+  }

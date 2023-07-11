@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu:wght@300&display=swap');
+
+body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    
+    .content {
+      flex: 1;
+      background-color: #ffffff;
+      padding-left:2vw;
+      box-sizing: border-box;
+     max-height: 100vh ;
+     height :98vh ;
+     overflow: hidden;
+         }
+         
+
+    .notification {
+      
+      background-color: orangered;
+      color: #ffffff;
+      padding: 8px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      height :auto;
+      max-height: 30vh ;
+    }
+    .bottom{
+      background-color: g#0B0B0D;
+      margin-top: 80vh;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .profile img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+.profile p{
+  font-weight: bolder;
+  font-size :1.9em 
+}
+    .message-input {
+       
+      z-index: 999;
+      display: flex;
+      margin-bottom: 0;
+    }
+
+    .message-input input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      margin-right: 10px;
+      border: 2px solid orange;
+    }
+
+    .message-input button {
+      padding: 8px 16px;
+      background-color: #7289da;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+.message-input span{
+  font-size: 2.1rem ;
+}.posts{
+  margin-top:20vh;
+}
+    .post {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f7f7f7;
+        
+    }
+
+    .post-content {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+.post-content img{
+  max-width: 70vw;
+  max-height: 30vh;
+}
+    .post-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: black;
+    }
+.group-name{
+  font-size: 2.5em;
+  font-weight: lighter;
+  letter-spacing: -1px;
+}.head{
+  width:70vw;
+  position: fixed;
+  display: flex;
+  flex-direction: column ;
+  color: orange;
+}

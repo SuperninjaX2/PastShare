@@ -1,1 +1,104 @@
-hello
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 3.6rem;
+    
+  }
+  h3{
+    font-size: 2.1rem ;
+    font-weight: lighter ;
+  }
+
+  p {
+    font-size: 1.7em;
+  }
+
+  label {
+    font-size: 3.1rem;
+  }
+
+  .container {
+    min-width: 30vw ;
+    padding: 10px;
+    min-height: 30vh ;
+  }
+.bg-divider{
+  height: 20vh;
+  width: 100vw ;
+}
+  .container div input {
+    width: 70vw;
+  }
+
+  button {
+    font-size: 3.1rem;
+    border: none;
+    background-color: orange;
+    color: white;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  small {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 2em;
+    list-style: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  strong {
+    font-size: 2.1rem;
+    font-weight: lighter;
+    text-rendering: geometricPrecision;
+    font-weight: bold;
+  }
+
+  .content {
+    flex: 1;
+    background-color: #ffffff;
+    padding-left: 2vw;
+    box-sizing: border-box;
+    max-height: 100vh;
+    height: 98vh;
+    overflow: hidden;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+.row{
+  flex-direction: row;
+}
+
+.mute {
+  color: grey;
+
+}
+.black{
+  background-color: rgba (0,0,0,0.7);
+}
+
+.mgl {
+  margin-left: auto;
+}

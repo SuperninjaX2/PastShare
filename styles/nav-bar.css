@@ -1,0 +1,46 @@
+
+@media only screen and (min-width: 600px) {  .sidebar {
+  display :flex;
+  flex-direction: column ;
+      width: 3vw;
+      max-width: 14vw;
+      height:100vh;
+      max-height: 100vh;
+      background-color: black;
+      color: orange;
+      font-size :1em;
+      margin: 0;
+      padding: 0;
+      transition: width 0.91s;
+      overflow: hidden ;
+    }
+    .sidebar:hover{
+      width :13vw;
+    }
+.sidebar ul{
+  width :14vw;
+  flex-direction: column ;
+  height :98vh ;
+  margin: 0;
+  padding:0;
+  overflow-x:hidden ;
+}
+.sidebar ul li{
+  display: flex;
+  flex-flow: row;
+  flex-direction: row;
+  text-align: right;
+  max-width :20vw ;
+  max-height: 3vh;
+  align-self: center ;
+  align-items: center;
+}
+.sidebar ul li:hover{
+  background-color: #fff;
+  color:black ;
+}
+.sidebar ul li span{
+  padding: 2px;
+}
+
+    }
