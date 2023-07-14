@@ -1,0 +1,671 @@
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+// Carbon 10 LESS stylesheet
+//
+// Mats Gothe
+// design.gothe.se
+// 2020
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+//
+// Carbon Color Specifications
+//
+@red-100: #2c080a;
+@red-90: #4f0408;
+@red-80: #750e13;
+@red-70: #a51920;
+@red-60: #da1e28;
+@red-50: #fb4b53;
+@red-40: #ff767c;
+@red-30: #ffa4a9;
+@red-20: #fcd0d3;
+@red-10: #fff0f1;
+
+@blue-100: #051243;
+@blue-90: #051b75;
+@blue-80: #0530ad;
+@blue-70: #054ada;
+@blue-60: #0062ff;
+@blue-50: #418cff;
+@blue-40: #6ea6ff;
+@blue-30: #97c1ff;
+@blue-20: #c9deff;
+@blue-10: #edf4ff;
+
+@cyan-100: #07192b;
+@cyan-90: #002749;
+@cyan-80: #003d73;
+@cyan-70: #0058a1;
+@cyan-60: #0072c3;
+@cyan-50: #1193e8;
+@cyan-40: #30b0ff;
+@cyan-30: #6ccaff;
+@cyan-20: #b3e6ff;
+@cyan-10: #e3f6ff;
+
+@teal-100: #081a1c;
+@teal-90: #022b30;
+@teal-80: #004144;
+@teal-70: #005d5d;
+@teal-60: #007d79;
+@teal-50: #009d9a;
+@teal-40: #08bdba;
+@teal-30: #3ddbd9;
+@teal-20: #9ef0f0;
+@teal-10: #d9fbfb;
+
+@black: #000000;
+@gray-100: #171717;
+@gray-90: #252525;
+@gray-80: #3d3d3d;
+@gray-70: #565656;
+@gray-60: #6f6f6f;
+@gray-50: #8c8c8c;
+@gray-40: #a4a4a4;
+@gray-30: #bebebe;
+@gray-20: #dcdcdc;
+@gray-10: #f3f3f3;
+@white: #ffffff;
+
+@cool-gray-100: #121619;
+@cool-gray-90: #21272a;
+@cool-gray-80: #343a3f;
+@cool-gray-70: #4d5358;
+@cool-gray-60: #697077;
+@cool-gray-50: #878d96;
+@cool-gray-40: #a2a9b0;
+@cool-gray-30: #c1c7cd;
+@cool-gray-20: #dde1e6;
+@cool-gray-10: #f2f4f8;
+
+@warm-gray-100: #171414;
+@warm-gray-90: #272525;
+@warm-gray-80: #3c3838;
+@warm-gray-70: #565151;
+@warm-gray-60: #736f6f;
+@warm-gray-50: #8f8b8b;
+@warm-gray-40: #ada8a8;
+@warm-gray-30: #cac5c4;
+@warm-gray-20: #e5e0df;
+@warm-gray-10: #f7f3f2;
+
+@green-100: #071908;
+@green-90: #022d0d;
+@green-80: #044317;
+@green-70: #0e6027;
+@green-60: #198038;
+@green-50: #24a148;
+@green-40: #42be65;
+@green-30: #6fdc8c;
+@green-20: #a7f0ba;
+@green-10: #defbe6;
+
+@purple-100: #1c0f30;
+@purple-90: #31135e;
+@purple-80: #491d8b;
+@purple-70: #6929c4;
+@purple-60: #8a3ffc;
+@purple-50: #a56eff;
+@purple-40: #be95ff;
+@purple-30: #d4bbff;
+@purple-20: #e8daff;
+@purple-10: #f6f2ff;
+
+@magenta-100: #2a0a18;
+@magenta-90: #510224;
+@magenta-80: #740937;
+@magenta-70: #9f1853;
+@magenta-60: #d12771;
+@magenta-50: #ee5396;
+@magenta-40: #ff7eb6;
+@magenta-30: #ffafd2;
+@magenta-20: #ffd6e8;
+@magenta-10: #fff0f7;
+
+@yellow: #f1c21b;
+
+@alert-60: #da1e28;
+@alert-50: #24a148;
+@alert-40: #ff832b;
+@alert-20: #f1c21b;
+
+// Carbon White Theme
+// https://www.carbondesignsystem.com/guidelines/color/usage
+
+// Core color tokens
+//
+@ui-background: @white; 	  	   // Default page background
+@interactive-01: @blue-60; 	  	 // Primary interactive color. Primary buttons
+@interactive-02: @gray-80; 	  	 // Secondary interactive color. Secondary button
+@interactive-03: @blue-60; 	  	 // Tertiary button
+@interactive-04: @blue-60; 		   // Selected elements. Active elements. Accent icons
+@danger: @red-60; 				       // Danger button background
+@ui-01: @gray-10; 				       // Container background on @ui-background. Secondary page background
+@ui-02: @white; 				         // Container background on @ui-01. ‘Light’ variant background
+@ui-03: @gray-20; 				       // Subtle border. Tertiary background
+@ui-04: @gray-50; 				       // Medium contrast border
+@ui-05: @gray-100; 		  		     // High contrast border. Emphasis elements
+@text-01: @gray-100; 	  		     // Primary text. Body copy. Headers. Hover text color for @text-02
+@text-02: @gray-80; 		  	     // Secondary text. Input labels
+@text-03: @gray-40; 			       // Placeholder text
+@text-04: @white; 				       // Text on interactive colors
+@text-05: @gray-60; 			       // Tertiary text. Help text
+@link-01: @blue-60; 			       // Primary links. Ghost button
+@inverse-link: @blue-40; 		     // Links on @inverse-02 backgrounds
+@icon-01: @gray-100; 			       // Primary icons
+@icon-02: @gray-70; 			       // Secondary icons
+@icon-03: @white; 			  	     // Icons on interactive colors. Icons on non-ui colors
+@field-01: @gray-10; 		  	     // Default input fields. Fields on @ui-backgrounds
+@field-02: @white; 				       // 'Light' variant input fields. Fields on @ui-02 backgrounds
+@inverse-01: @white; 			       // Inverse text color. Inverse icon color
+@inverse-02: @gray-80; 		  	   // High contrast backgrounds. High contrast element
+@support-01: @red-60; 		  	   // Error
+@support-02: @green-50; 	  	   // Success
+@support-03: @yellow; 		  	   // Warning. Yellow
+@support-04: @blue-70; 			     // Information
+@inverse-support-01: @red-50;    // Danger in high contrast moments
+@inverse-support-02: @green-40;  // Success in high contrast moments
+@inverse-support-03: @yellow; 	 // Warning in high contrast moments
+@inverse-support-04: @blue-50; 	 // Information in high contrast moments
+@overlay-01: @gray-100; 		     // Background overlay. @50%
+
+// Interactive color tokens
+//
+@focus: @blue-60; 				       // Focus border. Focus underline
+@inverse-focus-ui: @white; 		   // Focus on high contrast moments
+@hover-primary: @blue-60; 		   // @interactive-01 hover
+@hover-primary-text: @blue-70; 	 // @interactive-01 text hover
+@hover-secondary: @gray-80; 	   // @interactive-02 hover
+@hover-tertiary: @blue-60; 		   // @interactive-03 hover, @inverse-01 hover
+@hover-ui: @gray-10; 			       // @ui-01 hover, @ui-02 hover, Transparent background hover
+@hover-selected-ui: @gray-20; 	 // Selected row hover
+@hover-danger: @red-60; 		     // @support-01 hover, Danger hover
+@hover-row: @gray-10; 			     // Row hover
+@inverse-hover-ui: @gray-80; 	   // Hover for @inverse-02
+@active-primary: @blue-80;		   // @interactive-01 active
+@active-secondary: @gray-60; 	   // @interactive-02 active, @inverse-01 active
+@active-tertiary: @blue-80;		   // @interactive-03 active
+@active-ui: @gray-30;			       // @ui-01 active, @ui-02 active
+@active-danger: @red-80;		     // @support-01 active, Danger active
+@selected-ui: @gray-20; 		     // Selected UI elements
+@highlight: @blue-20;			       // @interactive-01 highlight
+@skeleton-01: @gray-10; 	       // Skeleton state of graphics
+@skeleton-02: @gray-30; 		     // Skeleton state of texts
+@visited-link: @purple-60; 		   // Visited links
+@disabled-01: @gray-10; 		     // Disabled fields, backgrounds, border
+@disabled-02: @gray-30; 		     // Disabled elements and text on @disabled-01, label, icons, border
+@disabled-03: @gray-50; 		     // Disabled text and icons on @disabled-02
+
+// Spacing and Layout Scales
+//
+@spacing-01: 2px;
+@spacing-02: 4px;
+@spacing-03: 8px;
+@spacing-04: 12px;
+@spacing-05: 16px;
+@spacing-06: 24px;
+@spacing-07: 32px;
+@spacing-08: 40px;
+@spacing-09: 48px;
+
+@spacing-3xs: 2px;
+@spacing-2xs: 4px;
+@spacing-xs: 8px;
+@spacing-sm: 12px;
+@spacing-md: 16px;
+@spacing-lg: 24px;
+@spacing-xl: 32px;
+@spacing-2xl: 40px;
+@spacing-3xl: 48px;
+
+@layout-01: 16px;
+@layout-02: 24px;
+@layout-03: 32px;
+@layout-04: 48px;
+@layout-05: 64px;
+@layout-06: 96px;
+@layout-07: 160px;
+
+@layout-2xs: 16px;
+@layout-xs: 24px;
+@layout-sms: 32px;
+@layout-md: 48px;
+@layout-lg: 64px;
+@layout-xl: 96px;
+@layout-2xl: 160px;
+
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+// Media sizes
+
+@sm: ~"(min-width: 320px)";
+@md: ~"(min-width: 672px)";
+@lg: ~"(min-width: 1056px)";
+@xlg: ~"(min-width: 1312px)";
+@max: ~"(min-width: 1584px)";
+
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+// PRODUCTIVE TYPE SET
+
+.code-01 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.code-02 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.caption-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.helper-text-01  {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+}
+
+.body-short-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+
+.body-long-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+}
+
+.body-short-02 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.body-long-02, p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.heading-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.16px;
+}
+
+.heading-02 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.heading-03 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.heading-04 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.heading-05 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.paragraph-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0px;
+}@import "typo.css";
+
+// Expressive Type Set
+
+.expressive-heading-03 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+    font-size: 20px;
+  	line-height: 26px;
+  }
+  @media @md {
+    font-size: 20px;
+  	line-height: 26px;
+  }
+  @media @lg {
+    font-size: 20px;
+  	line-height: 26px;
+  }
+  @media @xlg {
+    font-size: 20px;
+  	line-height: 26px;
+  }
+  @media @max {
+    font-size: 20px;
+  	line-height: 26px;
+  }
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.expressive-heading-04 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @md {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @lg {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @xlg {
+    font-size: 32px;
+  	line-height: 56px;
+  }
+  @media @max {
+    font-size: 60px;
+  	line-height: 40px;
+  }
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.expressive-heading-05 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 32px;
+  	line-height: 40px;
+  	font-weight: 400;
+  }
+  @media @md {
+  	font-size: 36px;
+  	line-height: 44px;
+  	font-weight: 400;
+  }
+  @media @lg {
+  	font-size: 42px;
+  	line-height: 50px;
+  	font-weight: 400;
+  }
+  @media @xlg {
+    font-size: 48px;
+  	line-height: 56px;
+  	font-weight: 400;
+  }
+  @media @max {
+    font-size: 60px;
+  	line-height: 70px;
+  	font-weight: 300;
+  }
+  letter-spacing: 0px;
+}
+
+.expressive-paragraph-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 24px;
+  	line-height: 30px;
+  }
+  @media @md {
+  	font-size: 24px;
+  	line-height: 30px;
+  }
+  @media @lg {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @xlg {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @max {
+    font-size: 32px;
+  	line-height: 40px;
+  }
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.expressive-paragraph-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 24px;
+  	line-height: 30px;
+  }
+  @media @md {
+  	font-size: 24px;
+  	line-height: 30px;
+  }
+  @media @lg {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @xlg {
+  	font-size: 28px;
+  	line-height: 36px;
+  }
+  @media @max {
+    font-size: 32px;
+  	line-height: 40px;
+  }
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.quotation-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 20px;
+  	line-height: 26px;
+  	font-weight: 400;
+  }
+  @media @md {
+  	font-size: 20px;
+  	line-height: 26px;
+  	font-weight: 400;
+  }
+  @media @lg {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 300;
+  }
+  @media @xlg {
+  	font-size: 28px;
+  	line-height: 36px;
+  	font-weight: 300;
+  }
+  @media @max {
+    font-size: 32px;
+  	line-height: 40px;
+  	font-weight: 300;
+  }
+  letter-spacing: 0px;
+}
+
+.quotation-02 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 32px;
+  	line-height: 40px;
+  }
+  @media @md {
+  	font-size: 36px;
+  	line-height: 44px;
+  }
+  @media @lg {
+  font-size: 42px;
+  line-height: 50px;
+  }
+  @media @xlg {
+  	font-size: 48px;
+  	line-height: 56px;
+  }
+  @media @max {
+    font-size: 60px;
+  	line-height: 70px;
+  }
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.display-01 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 42px;
+  	line-height: 50px;
+  }
+  @media @md {
+  	font-size: 42px;
+  	line-height: 50px;
+  }
+  @media @lg {
+  font-size: 54px;
+  line-height: 64px;
+  }
+  @media @xlg {
+  	font-size: 60px;
+  	line-height: 70px;
+  }
+  @media @max {
+    font-size: 76px;
+  	line-height: 86px;
+  }
+  font-weight: 300;
+  letter-spacing: 0px;
+}
+
+.display-02 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 42px;
+  	line-height: 50px;
+  }
+  @media @md {
+  	font-size: 42px;
+  	line-height: 50px;
+  }
+  @media @lg {
+  font-size: 54px;
+  line-height: 64px;
+  }
+  @media @xlg {
+  	font-size: 60px;
+  	line-height: 70px;
+  }
+  @media @max {
+    font-size: 76px;
+  	line-height: 86px;
+  }
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+.display-03 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 42px;
+  	line-height: 50px;
+  	letter-spacing: 0px;
+  }
+  @media @md {
+  	font-size: 68px;
+  	line-height: 78px;
+  	letter-spacing: 0px;
+  }
+  @media @lg {
+  font-size: 92px;
+  line-height: 102px;
+    	letter-spacing: -0.64px;
+  }
+  @media @xlg {
+  	font-size: 122px;
+  	line-height: 130px;
+  	letter-spacing: -0.64px;
+  }
+  @media @max {
+    font-size: 156px;
+  	line-height: 164px;
+  	letter-spacing: -0.96px;
+  }
+  font-weight: 300;
+}
+
+.display-04 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  @media @sm {
+  	font-size: 42px;
+  	line-height: 50px;
+  	letter-spacing: 0px;
+  }
+  @media @md {
+  	font-size: 68px;
+  	line-height: 78px;
+  	letter-spacing: 0px;
+  }
+  @media @lg {
+  font-size: 92px;
+  line-height: 102px;
+    	letter-spacing: -0.64px;
+  }
+  @media @xlg {
+  	font-size: 122px;
+  	line-height: 130px;
+  	letter-spacing: -0.64px;
+  }
+  @media @max {
+    font-size: 156px;
+  	line-height: 164px;
+  	letter-spacing: -0.96px;
+  }
+  font-weight: 600;
+
+}
+
+// ––––––––––––––––––––––––––––––––––––––––––––––––––

@@ -1,0 +1,135 @@
+@import "carbon10";
+@width: 40vw;
+@height: 30vh;
+;
+@fullScreenY: 100vh;
+@fullScreenX: 100vw;
+@profileHeight: 20vh;
+@spacing-01: 2px;
+@spacing-02: 4px;
+@spacing-03: 8px;
+@spacing-04: 12px;
+@spacing-05: 16px;
+@spacing-06: 24px;
+@spacing-07: 32px;
+@spacing-08: 40px;
+@spacing-09: 48px;
+
+@spacing-3xs: 2px;
+@spacing-2xs: 4px;
+@spacing-xs: 8px;
+@spacing-sm: 12px;
+
+body {
+  background-color: white;
+}
+
+.profile {
+  display: flex;
+  max-height: @profileHeight;
+  background: linear-gradient(to right , red , orange );
+  color :white;
+  margin-bottom: @spacing-02;
+}
+
+.profile-pic {
+  width: @width;
+  height: @height ;
+  border-radius: 50%;
+
+  
+}
+.bio{
+  margin-top: @spacing-02*5;
+}
+.border{
+  height :@height ;
+  width: @width+5px;
+  border: 2px solid orange ;
+  border-left:none;
+  border-top: none;
+  border-radius: 50%;
+}
+
+.profile-name {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+}
+
+main {
+  margin-top: @spacing-09 *2;
+}
+.notification{
+  margin: @spacing-09
+}
+.alert {
+  background-color: orange;
+}
+
+
+
+.boom {
+  font-size: 3.1rem;
+  letter-spacing: -0.1px;
+  color: black;
+}
+
+.stats{
+  color :black ;
+  display: flex;
+  flex-direction :column ;
+  align-items: center;
+  //width: 50vw;
+  width: 90%;
+  margin: auto;
+  max-width: 22em;
+
+  position: relative;
+  padding: 30% 2em;
+  box-sizing: border-box;
+
+  @border: 5px;
+  color: #FFF;
+  background: white;
+  background-clip: padding-box; /* !importanté */
+  border: solid @border transparent; /* !importanté */
+  border-radius: 1em;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -@border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, red, orange);
+  }
+}
+@media only screen and (min-width: 800px) {
+  @w:29vw;
+  @h:19vh;
+  .profile-pic{
+    
+    margin-top: 5vh;
+    width:  @w;
+    height: @h;
+  }
+  .border{
+    width :@w + 4px;
+    height :@h + 5vh;
+  }
+  .stats{
+    color: black ;
+    width: @fullScreenX -40vw;
+    max-width :90vw;
+    max-height: 10vh;
+    height: 10vh;
+    margin-bottom: 10vh;
+  }
+  .stats:hover{
+    background:linear-gradient(to right,red , orange);
+    color:white
+  }
+  
+  }
